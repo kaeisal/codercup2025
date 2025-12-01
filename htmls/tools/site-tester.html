@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <h1>webTester</h1>
+    <div class="right">
+        <a href="../tools.html" class="back">メニューにもどる</a>
+    </div>
+    <p class="text-size-normal">
+        すぐに使えるWebeditorです。HTMLなどを簡単に学べます。
+    </p>
+    <div id="box">
+      <div class="tab">
+        <label>
+          <input type="radio" name="tab" checked />
+          HTML
+        </label>
+        <div>
+          <div id="editor-html" style="height: 300px;"></div>
+        </div>
+
+        <label>
+          <input type="radio" name="tab" />
+          CSS
+        </label>
+        <div>
+          <div id="editor-css" style="height: 300px;"></div>
+        </div>
+
+        <label>
+          <input type="radio" name="tab" />
+          JavaScript
+        </label>
+        <div>
+          <div id="editor-js" style="height: 300px;"></div>
+        </div>
+        <script src="js/webtester.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ext-language_tools.js"></script>
+        <script>
+          const editorHTML = ace.edit("editor-html");
+          editorHTML.$blockScrolling = Infinity;
+          editorHTML.setOptions({
+            enableBasicAutocompletion: true,
+            enableSnippets: true,
+            enableLiveAutocompletion: true,
+            fontSize: "20px",
+          });
+          editorHTML.setTheme("ace/theme/monokai");
+          editorHTML.getSession().setMode("ace/mode/html");
+
+          const editorCSS = ace.edit("editor-css");
+          editorCSS.$blockScrolling = Infinity;
+          editorCSS.setOptions({
+            enableBasicAutocompletion: true,
+            enableSnippets: true,
+            enableLiveAutocompletion: true,
+            fontSize: "20px",
+          });
+          editorCSS.setTheme("ace/theme/monokai");
+          editorCSS.getSession().setMode("ace/mode/css");
+
+          const editorJS = ace.edit("editor-js");
+          editorJS.$blockScrolling = Infinity;
+          editorJS.setOptions({
+            enableBasicAutocompletion: true,
+            enableSnippets: true,
+            enableLiveAutocompletion: true,
+            fontSize: "20px",
+          });
+          editorJS.setTheme("ace/theme/monokai");
+          editorJS.getSession().setMode("ace/mode/javascript");
+          updatePreview();
+
+          editorHTML.on('change', function() {
+            updatePreview(editorHTML, editorCSS, editorJS, 'preview');
+          });
+          editorCSS.on('change', function() {
+            updatePreview(editorHTML, editorCSS, editorJS, 'preview');
+          });
+          editorJS.on('change', function() {
+            updatePreview(editorHTML, editorCSS, editorJS, 'preview');
+          });
+        </script>
+      </div>
+    </div>
+    <div id="preview"></div>
+  </body>
+</html>

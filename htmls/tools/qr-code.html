@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" lang="ja">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/qrcode.css">
+  <title>QRcode</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <p class="text-size-normal">
+    QRcodeを簡単に生成、ダウンロードできます。<br>
+    もちろんURL以外の文字を格納することだってできます!<br>
+    ダウンロードを押せば生成とダウンロード同時に行えます。
+  </p>
+<div class="center">
+  <input id="inp" type="url" class="text-size-normal" placeholder="URLを入力！" >                  
+  <button id="btn" onclick="qrcode()" class="text-size-normal" >作成</button>
+  <button id="" onclick="download()" class="text-size-normal">ダウンロード</button>
+  <div id="QR"></div>
+</div>        
+<div class="center">
+  <a href="../tools.html" class="back">メニューにもどる</a>
+</div> 
+  <script src="js/qr-code.js"></script>
+</body>
+</html>

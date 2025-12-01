@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="book font-style">
+    <h1 class="center">JavaScript基本文法</h1>
+    <p class="book-p">
+      まず覚えてほしいのは文字を表す時は""で囲いましょう。"これは文字"というような感じです。<br>
+      演算子と言って計算をするのはscratchと一緒で+,-,*,/を使います。
+    </p>
+    <div class="code">
+      <button id="copy righ" onclick="copy_1()">copy</button>
+        <div class="left">
+          <div class="code-text">
+              <pre>
+              <code>
+let X = 12;
+              </code>
+            </pre>
+          </div>
+      </div>
+    </div>  
+  <p class="book-p">
+    変数を作るときはletを使います。scratchでもおなじみの変数です。
+  </p>
+      <div class="code">
+      <button id="copy righ" onclick="copy_2()">copy</button>
+        <div class="left">
+          <div class="code-text">
+              <pre>
+              <code>
+const X = 12;
+              </code>
+            </pre>
+          </div>
+      </div>
+    </div>
+      <p class="book-p">
+    定数を作るときはconstを使います。これはあまりなじみがないと思いますが定数と言って定義したらもう変更できない変数のことです。<br>
+    例えば円周率は3.1415926535.....のような感じですよね。面倒じゃないですか。そういう時はconst pi = 3.141592;のようにすればいいです<br>
+    円周率は変わったりしませんよね。なので変わらないものを定義するときに使います。
+  </p>
+  <div class="code">
+      <button id="copy righ" onclick="copy_3()">copy</button>
+        <div class="left">
+          <div class="code-text">
+              <pre>
+              <code>
+const = 0;
+if(number == 0){
+  //これはブラウザの裏側のログに記録を残します。
+  console.log("numbarは0です")
+}else{
+  console.log("numbarは0ではありません")
+}
+              </code>
+            </pre>
+          </div>
+      </div>
+    </div>
+    <p class="book-p">
+      これはScratchのもし~なら、~でなければの処理です。<br>
+      ifを使います。()に条件を書くことで使うことができます。<br>
+      注意なのですが (x = 0)という感じのブロックを使うので=でいいと思うかもしれませんが==か===で記述しないとだめです。<br>
+      ~でなければの処理はelseを使うことでできます。~でなければのところに条件をつけるにはelseをelse if()にすることで可能です。
+    </p>
+    <div class="code">
+      <button id="copy righ" onclick="copy_4()">copy</button>
+        <div class="left">
+          <div class="code-text">
+              <pre>
+              <code>
+for(let i = 0; i < 3;i++){
+  console.log(i + "回目です。")
+}
+              </code>
+            </pre>
+          </div>
+      </div>
+    </div>
+    <p class="book-p">
+      これは何回繰り返すのことです。3のところを変えればその回数実行されます。<br><br>
+      少しの基礎文法を掲載しました。<br>
+      もっと興味がある方は↓↓↓↓↓↓↓のおすすめサイトをのぞいてみてください。<br>
+      https://zenn.dev/peter_norio/articles/d60854ef8692de<br>
+      https://jsprimer.net/<br>
+    </p>
+  <script>
+    function copy(text){
+      navigator.clipboard.writeText(text);
+    }
+    function copy_1(){
+      copy("let X = 12;");
+    }
+    function copy_2(){
+      copy("const X = 12;");
+    }
+    function copy_3(){
+      copy(`
+const = 0;
+if(number == 0){
+  //これはブラウザの裏側のログに記録を残します。
+  console.log("numbarは0です")
+}else{
+  console.log("numbarは0ではありません")
+}
+  `);
+    }
+    function copy_4(){
+      copy(`
+for(let i = 0; i < 3;i++){
+  console.log(i + "回目です。")
+}
+  `);
+    }
+  </script>
+</div>
+<div class="center bottom-space">
+<a href="../js.html" class="back">戻る</a>
+</div>
+</body>
+</html>

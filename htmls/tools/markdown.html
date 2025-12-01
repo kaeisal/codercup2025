@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <p class="center text-size-normal">
+        マークダウンをHTML変換しコピーしたりダウンロードできる簡素なeditorです。
+    </p>
+    <div class="container">
+        <div class="center">
+            <textarea class="editor" id="markdown-input" placeholder="ここにマークダウンを書いてください"></textarea><br>
+            <span class="editor" id="html-preview"></span>
+    </div>
+        
+        
+        <div class="center">
+            <button class="controls" onclick="download()">ダウンロード</button>
+            <button class="controls" onclick="textcopy()">クリップボードにコピー</button>
+        </div>
+    </div>
+    <div class="controls center">
+        <a href="../tools.html" class="back">メニューにもどる</a>
+    </div> 
+    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+    <script src="js/markdown.js"></script>
+</body>
+</html>

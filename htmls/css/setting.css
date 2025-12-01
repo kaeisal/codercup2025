@@ -1,0 +1,12 @@
+body{
+    background-color: #eeeff9;
+}
+
+.wifi{
+    width: 100px;
+}
+a{
+    border-radius: 30px;
+    background: linear-gradient(#0092c7,#00c74c89);
+    font-size: 40px;    
+}

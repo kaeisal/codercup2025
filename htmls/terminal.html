@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Javascript Terminal Emulator</h1>
+    <div class="right">
+      <a class="back" href="../index.html">メニューにもどる</a>
+    </div>
+    <h2>shell</h2>
+    <div class="tab">
+    <label>
+        <input type="radio" name="tab" checked>
+        ターミナル
+    </label>
+    <div>
+      <pre id="shell" class="terminal Tmain"></pre>
+      <pre id="mode" class="terminal"></pre>
+      <input class="terminal-input" id="command" type="text" placeholder="コマンドを入力"/>
+      <script src="js/library/Objects.js"></script>
+      <script src="js/terminal.js"></script>
+      <h3>Terminalにちょうせんしてみよう</h3>
+
+      <h2>
+        コマンド<ruby>一覧<rt>いちらん</rt></ruby>
+      </h2>
+      <pre>
+        <p class="command-style">
+
+      ☆ls                                    今いるディレクトリのファイルを表示
+        
+
+      ☆cd ディレクトリ名                      ディレクトリに移動する
+      
+      
+      ☆pwd                                   今いるディレクトリのパスを表示
+      
+      
+      ☆date                                  現在の日時を表示
+      
+      
+      ☆echo "メッセージ"                      メッセージを表示
+      
+      
+      ☆cat ファイル名                         ファイルの内容を表示
+        
+
+      ☆rm ファイル名                          ファイルを削除
+        
+
+      ☆mkdir ディレクトリ名                   ディレクトリを作成
+        
+
+      ☆rmdir ディレクトリ名                   ディレクトリを削除
+      
+        
+      ☆mv 元ファイル名 移動先ファイル名        ファイルを移動
+           
+      
+      ☆vi ファイル名                          ファイルを作成&編集  i yy p dd gg G ZZ :q :wq :w :numに対応
+
+
+      ☆shutdown                              シャットダウン
+
+      
+      ☆screenfetch                           いろいろな情報を表示
+        
+      ディレクトリとは、ファイルをまとめるためのフォルダのことだよ。
+      <ruby>基本<rt>きほん</rt></ruby>、Windowsやmacではフォルダ、Linuxではディレクトリと呼ばれるよ。
+         
+        <ruby>基本的<rt>きほんてき</rt></ruby>なファイル<ruby>操作<rt>そうさ</rt></ruby>はこれらのコマンドでできるよ。
+      
+      ---このエミュレータの魅力---
+          JSLinuxなどのエミュレータと違い基本的なコマンドのみで軽量です。
+          https://www.masswerk.at/jsuix/index.htmlなどのサイトでも軽量で非常に完成度の高いUnixエミュレーションを体験できますが頑張って読み物などを作ったので見てほしいです。
+          これからも改良を続けていこうと思います。
+
+      ※なるべく基本的に使うUnix系Commandはそろえています。
+        使用感はなるべくUnix系で用いられるShellの動作に寄せていますが
+        js初心者の僕が作成したこともありバグが発生するかもしれません。  
+      </p>  
+    </pre>
+      <a href="books/7.html">仕様書</a>
+    </div>
+
+    <label>
+        <input type="radio" name="tab">
+        ハードウェア
+    </label>
+    <div>
+      <button id="powerButton" class="text-size-normal">
+        <img src="images/powerButton.png" width="40">
+      </button>
+      <p class="text-size-normal">
+        電源ボタン
+        <br><br>
+        シャットダウンしたときに起動できます。
+      </p>
+      <h2>PCの基本構成</h2>
+      <img src="images/pc.png">
+    </div>
+
+    <label>
+        <input type="radio" name="tab">
+        読み物
+    </label>
+    <div>
+    <div class="book">
+      <p class="font-style about-terminal">
+        <br />
+        <ruby>最初<rt>さいしょ</rt></ruby
+        >は、lsコマンドで今いるディレクトリのファイルを<ruby>確認<rt>かくにん</rt></ruby>してみてね。 どう？ハッカーの気分になれたかな？ <br /><br />
+        <ruby>本物<rt>ほんもの</rt></ruby
+        >のターミナルはもっとコマンドがあって楽しいよ。
+        <br />
+        windowsならWSLとPowershell、Linuxならbashやzsh、macならターミナルなどがあるよ。
+        <br />
+        androidならTermuxなどのアプリ、iPhoneならiSHなどのアプリがあるよ。
+        <br />
+        いろんなOSでターミナルを使ってみてね。
+        <br />
+        LinuxをPCにインストールして使うのはおすすめ。
+        <br />
+        <ruby>仮想環境<rt>かそうかんきょう</rt></ruby
+        >というPCの中にPCを作ることができるソフトを使ってLinuxをお<ruby
+          >試<rt>ため</rt></ruby
+        >しすることもできるよ。
+        <br />
+        でも<ruby>少し高性能<rt>すこ こうせいのう</rt></ruby
+        >なPCが<ruby>必要<rt>ひつよう</rt></ruby
+        >だからリサイクルショップで<ruby>中古<rt>ちゅうこ</rt></ruby
+        >のPCを<ruby>買<rt>か</rt></ruby
+        >ってLinuxをインストールして<ruby>使う<rt>つかう</rt></ruby
+        >といいよ
+        <br />
+        ハッカーといわれる人たちはLinuxを使っていることが多いよ。映画などでよく見るこの画面はLinuxなんだ。
+        <br />
+        いちいちマウスを<ruby>動<rt>うご</rt></ruby
+        >かしてポチポチするよりも、カタカタとキーボードを打ったほうが<ruby
+          >速<rt>はや</rt></ruby
+        >いしかっこいいよね。 <br /><br />
+        Q&Aコーナー
+        <br />
+        Q. ターミナルのいいところって？<ruby>黒<rt>くろ</rt></ruby
+        >くて<ruby>文字<rt>もじ</rt></ruby
+        >だけの<ruby>画面<rt>がめん</rt></ruby
+        >でつかいにくいよね。 <br /><br />
+        A. ターミナルはコマンドを入力して<ruby>操作<rt>そうさ</rt></ruby
+        >するから、マウスを使わずにすばやく<ruby>操作<rt>そうさ</rt></ruby
+        >できるよ。
+        <br />
+        ただしマウスのほうが<ruby>速<rt>はや</rt></ruby
+        >いときもあるけどね。
+        <br />
+        また、コマンドベースのOSはとても<ruby>軽量<rt>けいりょう</rt></ruby
+        >で、リソースをあまり<ruby>消費<rt>しょうひ</rt></ruby
+        >しないから、古いコンピューターでも<ruby>快適<rt>かいてき</rt></ruby
+        >に使えるよ。
+        <br />
+        LinuxやFreeBSDなどがあるね。
+        <br />
+        さらに、ターミナルを使うことで、コンピューターの仕組みをより深く<ruby
+          >理解<rt>りかい</rt></ruby
+        >できるようになるよ。
+        <br />
+        また、Webサイトを作るときにLinuxを使うことがとても多いよ。
+        <br />
+        <ruby>最近<rt>さいきん</rt></ruby
+        >はコードを<ruby>書<rt>か</rt></ruby
+        >かずに作ることもできるけどできることが少ないよ。 <br /><br /><br />
+        Q.
+        windowsだけでいいんじゃないの？macはきれいなデザインでiPhoneのアプリを作ることができるけどLinuxは<ruby
+          >古臭<rt>ふるくさ</rt></ruby
+        >いしむずかしいし<ruby>意味<rb>いみ</rb></ruby
+        >あるの？ <br /><br />
+        A. おっとそんなことはないよ。Linuxがないと<ruby>困<rt>こま</rt></ruby
+        >ってしまうよ。
+        <br />
+        linuxはwebサイトのサーバー、androidスマホにも使われているよ。webサイトが見れないと<ruby
+          >困<rt>こま</rt></ruby
+        >るよね。
+        <br />
+        linuxは<ruby>裏<rt>うら</rt></ruby
+        >で世界を支えているOSなんだ。
+        <br />
+        また、最近のLinuxはwindowsのようなマウス<ruby>操作<rt>そうさ</rt></ruby
+        >ができるし、無料で自由だからいいんだ。
+        <br />
+        windowsも無料だよ？実はwindowsは無料ではないんだ。ライセンス料としてOSを使うためにお金がかかるんだ。
+        <br />
+        もともと入っているPCはメーカーが払っていて値段に含まれることが多いよ。
+        <br />
+        でもLinuxは無料で使えるし、自由にカスタマイズできるからとてもいいんだ。
+        <br />
+        そしてどれも<ruby>大体軽量<rt>だいたいけいりょう</rt></ruby
+        >だから古いPCをまた使えるようにしてくれるんだよ。
+        <br />
+        <ruby>軽量<rt>けいりょう</rt></ruby
+        >でGUIもあるものがあるから初心者でも使いやすいよ。 <br /><br /><br />
+        Q. Linuxやターミナルのデメリットは？
+        <br /><br />
+        A. デメリットは、windowsやmacのような簡単に使えるGUIが少ないことだね。
+        <br />
+        Linuxはソフトの入れ方が少し<ruby>違<rt>ちが</rt></ruby
+        >ったり、使えないソフトがあったりするから自分で<ruby
+          >調<rt>しら</rt></ruby
+        >べる<ruby>必要<rt>ひつよう</rt></ruby
+        >があるんだ。
+        <br />
+        自由とはいっても、windowsやmacのように<ruby>裏<rt>うら</rt></ruby
+        >でいろいろやってくれるわけではないから、少しむずかしいかもしれないね。
+        <br />
+        でも、Linuxを使うことで、コンピューターの<ruby>仕組<rt>しく</rt></ruby
+        >みをより<ruby>深<rt>ふか</rt>く</ruby><ruby>理解<rt>りかい</rt></ruby
+        >できるようになるし、自由にカスタマイズできるから、
+        <br />
+        自分だけの<ruby>環境<rt>かんきょう</rt></ruby
+        >を作ることができるんだ。
+        <br />
+        とはいってもwindows,mac,linuxはそれぞれの良さがあるから、どれを使うかは自分の<ruby
+          >好<rt>この</rt></ruby
+        >みや目的に合わせて<ruby>選<rt>えら</rt></ruby
+        >ぶといいよ。
+        <br />
+        使いなれた<ruby>環境<rt>かんきょう</rt></ruby
+        >を使うのが一番だよ。
+        <br />
+      </p>
+    </div>
+</div>
+</div>  </body>
+</html>

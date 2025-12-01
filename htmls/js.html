@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JS 実行</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>JavaScript PlayGround</h1>
+    <textarea class="text-size-normal js" id="codeInput" rows="10" cols="50">
+// JavaScript プログラミングをしてみよう
+let name = prompt("あなたの名前はなんですか？:");
+console.log("Hello, "+name+"!");
+    </textarea>
+    <br>
+    <button class="text-size-normal" onclick="runCode()">実行</button>
+
+    <script src="js/js_run.js"></script>
+    
+    
+    <h2>コンソール</h2>
+    <pre id="console" class="js-console"></pre>
+    
+    <h2>javascriptプログラミングをしてみよう</h2>
+    <p class="font-style">
+      これは<ruby>JavaScript<rt>じゃばすくりぷと</rt></ruby>というプログラミング<ruby>言語<rt>げんご</rt></ruby>だよ
+      <br>
+      <ruby>実行<rt>じっこう</rt></ruby>を<ruby>押<rt>お</rt></ruby>してみよう。
+      <br>
+      <br>
+      コードが<ruby>実行<rt>じっこう</rt></ruby>されるよ。
+      <br>
+      <ruby>最初<rt>さいしょ</rt></ruby>のコードを<ruby>実行<rt>じっこう</rt></ruby>するとあなたの<ruby>名前<rt>なまえ</rt>を聞<rt>き</rt></ruby>いてくるよ。
+      <br>
+      <ruby>名前<rt>なまえ</rt>を入力<rt>にゅうりょく</rt></ruby>してみてね。
+      <br>
+      その<ruby>後<rt>ご</rt></ruby>、コンソールに「Hello, [あなたが入力した名前]!」と<ruby>表示<rt>ひょうじ</rt>されるよ。</ruby>
+      <br>
+      <br>
+      　このコードはまずnameという<ruby>変数<rt>へんすう</rt></ruby>をつくってその中にprompt<ruby>関数<rt>かんすう</rt></ruby>を入れて<ruby>返り値<rt>かえりち</rt></ruby>を変数に入れているよ。
+      <br>
+      <ruby>返り値<rt>かえりち</rt></ruby>はあなたが入力してくれた<ruby>名前<rt>なまえ</rt></ruby>だよ。
+      その<ruby>後<rt>ご</rt></ruby>、console.logという<ruby>関数<rt>かんすう</rt></ruby>を<ruby>使<rt>つか</rt></ruby>ってHelloとnameという<ruby>変数<rt>へんすう</rt></ruby>の<ruby>値<rt>あたい</rt></ruby>を<ruby>連結<rt>れんけつ</rt></ruby>して<ruby>表示<rt>ひょうじ</rt></ruby>しているんだ。
+      <br>
+      コードの<ruby>意味<rt>いみ</rt></ruby>が<ruby>分<rt>わ</rt></ruby>かったかな？
+      <br>
+      <ruby>自分<rt>じぶん</rt></ruby>でもコードをつくってみよう。
+      <br>※混乱を避けるためにAceを使わずにシンプルにしました。
+    </p>
+    <a href="books/about-js.html">JavaScriptの基本!</a>
+    <br><br>
+    <div>
+    <a href="../index.html" class="back">メニューにもどる</a>
+    </div>
+</body>
+</html>

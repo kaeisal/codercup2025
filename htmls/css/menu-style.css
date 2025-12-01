@@ -1,0 +1,43 @@
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.menu-box-style {
+  margin: 0 auto;
+  max-width: 400px;
+  max-height: 400px;
+  width: 25vw;
+  height: 18vw;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.7)3px 3px 20px;
+}
+
+.menu-book-img {
+  width: 25vw;
+  height: 18vw;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.box-image {
+  max-width: 400px;
+  width: 18vw;
+  height: 18vw;
+}
+
+.book-title-image {
+  width: 24vw;
+  height: 17vw;
+  max-width: 400px;
+  max-height:283px
+}

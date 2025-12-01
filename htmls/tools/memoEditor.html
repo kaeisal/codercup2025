@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/tln.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script type="text/javascript" src="./js/library/tln.min.js"></script>
+  </head>
+  <body>
+    <div class="flex">
+      <div class="container">
+        <button class="btn" id="btn">ファイル</button>
+
+        <div class="dropdown" id="dropdown">
+          <button class="menu" onclick="newfile()">新しいファイル(Ctrl+N)</button>
+          <br />
+          <button class="menu" onclick="openfile()">開く(Ctrl+O)</button>
+          <br />
+          <button class="menu" onclick="openlocalfile()">PCから開く(Ctrl+P)</button>
+          <br />
+          <button class="menu" onclick="savefile()">保存(Ctrl+S)</button>
+          <br />
+          <button class="menu" onclick="downloadfile()">PCに保存(Ctrl+D)</button>
+        </div>
+      </div>
+      <div class="container">
+        <button class="btn" id="btn-2">編集(E)</button>
+        <div class="dropdown" id="dropdown-2">
+          <button class="menu" onclick="undoAction()">元に戻す(Ctrl+Z)</button>
+          <br />
+          <button class="menu" onclick="redoAction()">やり直し(Ctrl+Y)</button>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div id="wrapper" style="width: 700px; height: 700px">
+      <textarea
+        id="textarea"
+        class="banana-cake"
+        style="width: auto; height: auto"
+      ></textarea>
+    </div>
+    <div id="undo" style="display: none;"></div>
+    <div id="redo" style="display: none;"></div>
+    <p >
+        簡単に使えるシンプルなメモ帳です。
+        <br>
+        PCのファイルを読み書きしたリ、このツールに保存したりできます。
+    </p>
+    <div class="left">
+      <a class="back" href="../tools.html">メニューにもどる</a>
+    </div>
+    <script src="js/library/textarea-undo-redo.js"></script>
+    <script src="js/memoEditor.js"></script>
+  </body>
+</html>
